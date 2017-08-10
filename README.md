@@ -119,7 +119,7 @@ And the story-list component should look like:
 
 ```hbs
 <select>
-  {{#each titles key="@index" as |title|}}
+  {{#each @titles key="@index" as |title|}}
     <option>{{title.data.title}}</option>
   {{/each}}
 </select>

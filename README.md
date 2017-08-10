@@ -95,11 +95,32 @@ In the main component template, add the list in which to generate the titles
 ```hbs
 <div>
   <h1>{{title}}</h1>
-  <ul>
+  <select>
     {{#each titles key="@index" as |title|}}
-      <li>{{title.data.title}}</li>
+      <option>{{title.data.title}}</option>
     {{/each}}
-  </ul>
+  </select>
   <story-list/>
 </div>
+```
+
+Might be a good idea to move the list into the story-list component
+
+The main template should now look like this:
+
+```hbs
+<div>
+  <h1>{{title}}</h1>
+  <story-list @titles={{titles}}/>
+</div>
+```
+
+And the story-list component should look like:
+
+```hbs
+<select>
+  {{#each titles key="@index" as |title|}}
+    <option>{{title.data.title}}</option>
+  {{/each}}
+</select>
 ```

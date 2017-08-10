@@ -1,1 +1,5 @@
-<div>story-list</div>
+<select>
+  {{#each titles key="@index" as |title|}}
+    <option>{{title.data.title}}</option>
+  {{/each}}
+</select>

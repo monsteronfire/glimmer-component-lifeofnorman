@@ -1,5 +1,9 @@
-<select>
+<ul>
   {{#each @titles key="@index" as |title|}}
-    <option>{{title.data.title}}</option>
+    <li>
+      <p>{{title.data.title}}
+        <a href={{title.data.url}}>[Read story on Reddit]</a>
+      </p>
+    </li>
   {{/each}}
-</select>
+</ul>

@@ -96,7 +96,7 @@ In the main component template, add the list in which to generate the titles
 <div>
   <h1>{{title}}</h1>
   <ul>
-    {{each key="@index" as |title|}}
+    {{#each titles key="@index" as |title|}}
       <li>{{title.data.title}}</li>
     {{/each}}
   </ul>

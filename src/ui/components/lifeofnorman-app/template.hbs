@@ -1,7 +1,7 @@
 <div><h1>{{title}}</h1></div>
-<ul>
+<select>
   {{#each titles key="@index" as |title|}}
-    <li>{{title.data.title}}</li>
+    <option>{{title.data.title}}</option>
   {{/each}}
-</ul>
+</select>
 <story-list/>
